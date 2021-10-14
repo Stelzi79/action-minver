@@ -31,7 +31,7 @@ const run = async () => {
     minverPath,
     'minver-cli',
     '--version',
-    '2.3.0',
+    '2.5.0',
   ]);
 
   try {
