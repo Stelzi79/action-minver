@@ -37,6 +37,8 @@ jobs:
         # tag-prefix: v
         # Optional. Specifies the log level.
         verbosity: info
+        # Optinal. Enables you to specifically choose the MinVer version that should be used
+        minver-version: 2.3.0
     - name: output #version major minor patch prerelease
       run: |
         echo Version: ${{ steps.version.outputs.version }}
