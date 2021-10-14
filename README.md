@@ -7,7 +7,7 @@ This repository contains a GitHub Action to run [MinVer](https://github.com/adam
 ## Configuration
 
 ```yaml
-- uses: thefringeninja/action-minver
+- uses: Stelzi79/action-minver@main-Stelzi79
   with:
     # Optional. Specifies which part of the version to auto-increment.
     auto-increment: patch
@@ -56,7 +56,7 @@ jobs:
         fetch-depth: 0
     - name: run minver
       id: version
-      uses: thefringeninja/action-minver
+      uses: Stelzi79/action-minver@main-Stelzi79
     - name: output
       run: |
         echo ${{ steps.version.outputs.version }}
