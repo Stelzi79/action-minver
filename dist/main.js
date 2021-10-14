@@ -46,7 +46,7 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
         minverPath,
         'minver-cli',
         '--version',
-        '2.3.0',
+        '2.5.0',
     ]);
     try {
         yield exec_1.exec(minver, args, {
