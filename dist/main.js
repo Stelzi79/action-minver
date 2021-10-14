@@ -37,6 +37,10 @@ const stdout = (data) => {
 };
 const minverPath = './minver';
 const minver = `${minverPath}/minver`;
+var minverVersion = '2.5.0';
+if (core.getInput('minver-version')) {
+    minverVersion = core.getInput('minver-version');
+}
 const run = () => __awaiter(void 0, void 0, void 0, function* () {
     const args = getArgs_1.default();
     yield exec_1.exec('dotnet', [
@@ -46,7 +50,7 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
         minverPath,
         'minver-cli',
         '--version',
-        '2.5.0',
+        minverVersion,
     ]);
     try {
         yield exec_1.exec(minver, args, {

@@ -20,6 +20,11 @@ const stdout = (data: Buffer) => {
 
 const minverPath = './minver';
 const minver = `${minverPath}/minver`;
+var minverVersion = '2.5.0';
+
+if (core.getInput('minver-version')) {
+  minverVersion = core.getInput('minver-version');
+}
 
 const run = async () => {
   const args = getArgs();
@@ -31,7 +36,7 @@ const run = async () => {
     minverPath,
     'minver-cli',
     '--version',
-    '2.5.0',
+    minverVersion,
   ]);
 
   try {
