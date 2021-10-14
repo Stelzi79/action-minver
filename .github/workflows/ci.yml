@@ -12,6 +12,6 @@ jobs:
     name: continuous-integration/github
     steps:
     - name: checkout
-      uses: actions/checkout@a14471d83
+      uses: actions/checkout@master
     - name: build
       run: "./test.sh"
