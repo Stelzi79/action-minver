@@ -37,14 +37,17 @@ You must run the following actions first:
 
 
 ## Example
+
+See the Test-Action [mainTest.yml](.github/workflows/mainTest.yml) and [GitHub Action](https://github.com/Stelzi79/action-minver/actions/workflows/mainTest.yml) for reference
 ```yaml
-name: Build
+name: Test Function of Action
 
 on:
-  pull_request:
   push:
+    tags: 
+      - '*'
     branches:
-    - master
+      - main-Stelzi79
 
 jobs:
   continuous-integration:
@@ -54,11 +57,33 @@ jobs:
       uses: actions/checkout@master
       with:
         fetch-depth: 0
+    - uses: benjlevesque/short-sha@v1.2
+      id: short-sha
+      with:
+        length: 7
     - name: run minver
       id: version
       uses: Stelzi79/action-minver@main-Stelzi79
-    - name: output
+      with:
+        # Optional. Specifies which part of the version to auto-increment.
+        auto-increment: patch
+        # Optional. Sets custom build metadata for your semantic version.
+        # build-metadata: ${{ github.sha }}
+        # build-metadata shortened to GitHub default lengh of 7
+        build-metadata: ${{ steps.short-sha.outputs.sha }}
+        # Optional. Specifies the default pre-release phase.
+        default-pre-release-phase: preview
+        # Optional. Specifies the minimum version to use when no tags exist.
+        minimum-major-minor: 0.1
+        # Optional. Specifies the prefix of the tags
+        # tag-prefix: v
+        # Optional. Specifies the log level.
+        verbosity: info
+    - name: output #version major minor patch prerelease
       run: |
-        echo ${{ steps.version.outputs.version }}
+        echo Version: ${{ steps.version.outputs.version }}
+        echo major: ${{ steps.version.outputs.major }}, minor: ${{ steps.version.outputs.minor }}, patch: ${{ steps.version.outputs.patch }}
+        echo prerelease: ${{ steps.version.outputs.prerelease }}
+
 ```
 Please pay special attention to the step id; without this you will not be able to refer to outputs in subsequent steps.
