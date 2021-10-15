@@ -1,4 +1,4 @@
-name: "action-minver"
+name: "action-minver-refreshed"
 description: "Runs minver to version your artifacts!"
 author: "thefringeninja, Stelzi79"
 inputs:
