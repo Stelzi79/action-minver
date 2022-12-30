@@ -21,7 +21,7 @@ jobs:
           length: 7
       - name: run minver
         id: version
-        uses: Stelzi79/action-minver@${{ github.ref_name }}
+        uses: Stelzi79/action-minver@HEAD
         with:
           # Optional. Specifies which part of the version to auto-increment.
           auto-increment: patch
