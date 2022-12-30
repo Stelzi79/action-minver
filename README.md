@@ -1,6 +1,6 @@
 # MinVer for GitHub Actions
 
-_[![Build status](https://github.com/thefringeninja/action-minver/workflows/Build/badge.svg)](https://github.com/thefringeninja/action-minver/actions)_
+_[![Build status](https://github.com/Stelzi79/action-minver/workflows/Build/badge.svg)](https://github.com/Stelzi79/action-minver/actions)_
 _[![Test Function of Action](https://github.com/Stelzi79/action-minver/actions/workflows/mainTest.yml/badge.svg)](https://github.com/Stelzi79/action-minver/actions/workflows/mainTest.yml)_
 
 This repository contains a GitHub Action to run [MinVer](https://github.com/adamralph/minver/). This is intended to be used for projects written in languages other than dotnet. See https://github.com/adamralph/minver/#usage for more information about MinVer.
@@ -84,8 +84,8 @@ jobs:
           # tag-prefix: v
           # Optional. Specifies the log level.
           verbosity: info
-          # Optional. Enables you to specifically choose the MinVer version that should be used. Defaults to 2.5.0
-          minver-version: 2.5.0
+          # Optional. Enables you to specifically choose the MinVer version that should be used. Defaults to 4.2.0
+          minver-version: 4.2.0
       - name: output #version major minor patch prerelease
         run: |
           echo Version: ${{ steps.version.outputs.version }}
