@@ -33,7 +33,7 @@ outputs:
   patch:
     description: "The patch component of the version number."
   prerelease:
-    description: "The prerelease component of the version number."
+    description: "The prerelease component of the version number. "
 
 runs:
   using: "node12"
