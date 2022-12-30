@@ -8,7 +8,7 @@ This repository contains a GitHub Action to run [MinVer](https://github.com/adam
 ## Configuration
 
 ```yaml
-- uses: Stelzi79/action-minver@3.0.1
+- uses: Stelzi79/action-minver@3.0.2
   with:
     # Optional. Specifies which part of the version to auto-increment.
     auto-increment: patch
@@ -68,7 +68,7 @@ jobs:
           length: 7
       - name: run minver
         id: version
-        uses: Stelzi79/action-minver@3.0.1
+        uses: Stelzi79/action-minver@3.0.2
         with:
           # Optional. Specifies which part of the version to auto-increment.
           auto-increment: patch
