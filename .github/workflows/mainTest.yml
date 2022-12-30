@@ -5,7 +5,7 @@ on:
     tags:
       - "*"
     branches:
-      - ${{ github.ref_name }}
+      - "*"
 
 jobs:
   continuous-integration:
@@ -27,7 +27,7 @@ jobs:
           auto-increment: patch
           # Optional. Sets custom build metadata for your semantic version.
           # build-metadata: ${{ github.sha }}
-          # build-metadata shortened to GitHub default lengh of 7
+          # build-metadata shortened to GitHub default length of 7
           build-metadata: ${{ steps.short-sha.outputs.sha }}
           # Optional. Specifies the default pre-release phase.
           default-pre-release-phase: preview

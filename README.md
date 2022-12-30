@@ -3,7 +3,7 @@
 _[![Build status](https://github.com/Stelzi79/action-minver/workflows/Build/badge.svg)](https://github.com/Stelzi79/action-minver/actions)_
 _[![Test Function of Action](https://github.com/Stelzi79/action-minver/actions/workflows/mainTest.yml/badge.svg)](https://github.com/Stelzi79/action-minver/actions/workflows/mainTest.yml)_
 
-This repository contains a GitHub Action to run [MinVer](https://github.com/adamralph/minver/). This is intended to be used for projects written in languages other than dotnet. See https://github.com/adamralph/minver/#usage for more information about MinVer.
+This repository contains a GitHub Action to run [MinVer](https://github.com/adamralph/minver/). This is intended to be used for projects written in languages other than dotnet. See <https://github.com/adamralph/minver/#usage> for more information about MinVer.
 
 ## Configuration
 
@@ -74,7 +74,7 @@ jobs:
           auto-increment: patch
           # Optional. Sets custom build metadata for your semantic version.
           # build-metadata: ${{ github.sha }}
-          # build-metadata shortened to GitHub default lengh of 7
+          # build-metadata shortened to GitHub default length of 7
           build-metadata: ${{ steps.short-sha.outputs.sha }}
           # Optional. Specifies the default pre-release phase.
           default-pre-release-phase: preview
