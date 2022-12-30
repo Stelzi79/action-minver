@@ -1,4 +1,4 @@
-name: Test Function of Action
+name: Test Function of Action on version 3.0.1
 
 on:
   push:
