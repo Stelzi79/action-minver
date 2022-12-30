@@ -47,7 +47,7 @@ const run = async () => {
       },
     });
   } catch (err) {
-    core.setFailed(err);
+    core.setFailed((err as Error).message);
   }
 };
 

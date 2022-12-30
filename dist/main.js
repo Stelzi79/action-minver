@@ -77,7 +77,7 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (err) {
-        core.setFailed(err);
+        core.setFailed(err.message);
     }
 });
 run();
