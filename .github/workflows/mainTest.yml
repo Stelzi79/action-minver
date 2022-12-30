@@ -5,7 +5,7 @@ on:
     tags:
       - "*"
     branches:
-      - main-Stelzi79
+      - ${{ github.ref_name }}
 
 jobs:
   continuous-integration:
@@ -21,7 +21,7 @@ jobs:
           length: 7
       - name: run minver
         id: version
-        uses: Stelzi79/action-minver@main-Stelzi79
+        uses: Stelzi79/action-minver@${{ github.ref_name }}
         with:
           # Optional. Specifies which part of the version to auto-increment.
           auto-increment: patch
