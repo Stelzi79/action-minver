@@ -22,8 +22,8 @@ This repository contains a GitHub Action to run [MinVer](https://github.com/adam
     tag-prefix: v
     # Optional. Specifies the log level.
     verbosity: trace
-    # Optional. Enables you to specifically choose the MinVer version that should be used. Defaults to 2.5.0
-    minver-version: 2.5.0
+    # Optional. Enables you to specifically choose the MinVer version that should be used. Defaults to 4.2.0
+    minver-version: 4.2.0
 ```
 
 ## Outputs
