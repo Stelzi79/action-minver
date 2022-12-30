@@ -20,7 +20,7 @@ const stdout = (data: Buffer) => {
 
 const minverPath = './minver';
 const minver = `${minverPath}/minver`;
-var minverVersion = '2.5.0';
+var minverVersion = '4.2.0';
 
 if (core.getInput('minver-version')) {
   minverVersion = core.getInput('minver-version');
@@ -47,7 +47,7 @@ const run = async () => {
       },
     });
   } catch (err) {
-    core.setFailed(err);
+    core.setFailed((err as Error).message);
   }
 };
 

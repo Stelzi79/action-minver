@@ -1,11 +1,11 @@
-name: Test Function of Action
+name: Test Function of Action on version 3.0.1
 
 on:
   push:
     tags:
       - "*"
     branches:
-      - "*"
+      - 3.0.1
 
 jobs:
   continuous-integration:
@@ -21,7 +21,7 @@ jobs:
           length: 7
       - name: run minver
         id: version
-        uses: Stelzi79/action-minver@main-Stelzi79
+        uses: Stelzi79/action-minver@3.0.1
         with:
           # Optional. Specifies which part of the version to auto-increment.
           auto-increment: patch
